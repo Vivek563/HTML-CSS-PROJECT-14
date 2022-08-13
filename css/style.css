@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #d5cfcf;
+    overflow: hidden;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    height: 20vh;
+}
+.logo img{
+    width: 100px;
+}
+.navbar .list{
+    display: flex;
+    gap: 90px;
+    font-size: 18px;
+    color: #666262;
+    list-style: none;
+    align-items: center;
+    position: relative;
+}
+.list .list-item:nth-child(2){
+    color: #000000;
+    font-size: 20px;
+}
+.line{
+    position: absolute;
+    left: -357px;
+    width: 60%;
+    border-radius: 40px;
+    height: 1.7px;
+    background-color: #000000;
+}
+
+main{
+    display: flex;
+}
+
+.left-image{
+    width: 38vw;
+}
+.left-images{
+    position: absolute;
+    width: 38vw;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+.left-image img{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    object-fit: cover;
+    left: 0;
+    bottom: 0;
+}
+
+/* ...... */
+.right{
+    display: flex;
+    position: relative;
+    width: 60vw;
+}
+
+.creative{
+    position: absolute;
+    left: 10%;
+    top: -40%;
+}
+.creative h1{
+    font-family: "Merriweather";
+    font-size: 7rem;
+    font-weight: 800;
+    color: #333333;
+}
+
+.creative > h1{
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+.creative > h1::after {
+    content: "";
+    width: 50px;
+    height: 12px;
+    display: inline-block;
+    border: 2px solid #898888;
+    margin-bottom: 25px;
+}
+.creative div{
+    margin-left: 110px;
+    margin-top: -30px;
+    color: #333333;
+    display: flex;
+    align-items: center;
+}
+
+.creative div p{
+    font-size: 1.5rem;
+    font-weight: normal;
+    line-height: 30px;
+    color: #898888;
+    padding-left: 40px;
+    padding-top: 30px;
+}
+
+.creative div h1::after {
+    content: "";
+    width: 22px;
+    height: 22px;
+    background-color: #333333;
+    display: inline-block;
+    border-radius: 50px;
+} 
+
+.right .btn {
+    position: absolute;
+    right: 0;
+    bottom: -70px;
+    right: -190px;
+}
+.right .btn button {
+    background-color: #333333;
+    color: #FFFFFF;
+    padding: 17px 78px;
+    border: none;
+    font-size: 18px;
+    font-weight: normal;
+    cursor: pointer;
+}
+.socialIcon {
+    position: absolute;
+    right: 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    top: -16px;
+}
+.socialIcon img {
+    width: 20px;
+}
+.socialIcon img:nth-child(2) {
+    width: 16px;
+}
+.socialIcon img:nth-child(3) {
+    width: 12px;
+}
+.socialIcon img:nth-child(4) {
+    width: 16px;
+}
+
+/* ...... */
+.below{
+    position: absolute;
+    top: 320px;
+    left: 100px;
+}
+ .below ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+ }
+ .below ul li {
+    font-size: 1rem;
+    list-style-type: none;
+    color: #868686;
+    display: flex;
+    align-items: center;
+}
+.below ul li:not(:last-child) {
+    padding-bottom: 28px;
+}
+.below ul li span {
+    background-color: #868686;
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    display: inline-block;
+    vertical-align: center;
+    margin-right: 20px;
+}
+.active-item .dot {
+    background-color: #333333;
+}
+.active-item p {
+    color: #333333;
+}
+.below .dot-line {
+    height: 120%;
+    width: 1.55px;
+    background-color: #868686;
+    position: absolute;
+    left: 7px;
+    top: 20px;
+}
+
+.bottom-quote {
+    position: absolute;
+    left: 270px;
+    top: 0px;
+}
+.bottom-quote p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.img {
+    width: 400px;
+}
+.img > img {
+    width: 100%;
+}
+.quote-icon .fa-quote-right {
+    color: #333333;
+    font-size: 40px;
+}
+.arrow {
+    position: absolute;
+    top: 120px;
+    right: -140px;
+}
+.arrow > img {
+    width: 30px;
+}
