@@ -1,96 +1,114 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&display=swap');
-
-*{
-    margin: 0;
+* {
     padding: 0;
-}
-body{
-    background-color: #d5cfcf;
-    overflow: hidden;
+    margin: 0;
 }
 
-.navbar{
+body {
+    background-color: #f5f2f0;
+    font-family: "Poppins", sans-serif;
+    overflow: hidden !important;
+}
+
+
+.navbar-container .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 40px;
+    padding: 0 120px;
     height: 20vh;
+    align-items: center;
+    overflow-x: auto;
+    width: 100vw;
 }
-.logo img{
+.navbar-container .navbar .logo img {
     width: 100px;
 }
-.navbar .list{
+
+.navbar-container .navbar .list {
+    list-style-type: none;
     display: flex;
-    gap: 90px;
-    font-size: 18px;
-    color: #666262;
-    list-style: none;
+    gap: 80px;
+    font-size: 13px;
+    color: #868686;
     align-items: center;
     position: relative;
 }
-.list .list-item:nth-child(2){
-    color: #000000;
-    font-size: 20px;
+.navbar-container .navbar .list .list-item {
+    cursor: pointer;
 }
-.line{
+.navbar-container .navbar .list .list-item:nth-child(2) {
+    color: #000000;
+    font-size: 14px;
+}
+.line {
     position: absolute;
-    left: -357px;
-    width: 60%;
+    left: -350px;
+    width: 68%;
     border-radius: 40px;
     height: 1.7px;
-    background-color: #000000;
+    background-color: #4e3535;
 }
 
-main{
+@media screen and (max-width: 1240px) {
+    .line {
+        display: none;
+    }
+}
+
+
+/*--------------------- left image section ------------------*/
+
+main {
     display: flex;
 }
-
-.left-image{
-    width: 38vw;
+.left-image-container {
+    width: 35vw;
 }
-.left-images{
+.left-image-container .left-image {
     position: absolute;
-    width: 38vw;
-    z-index: -1;
     top: 0;
     left: 0;
     bottom: 0;
+    width: 35vw;
+    z-index: -1;
 }
-.left-image img{
+.left-image-container .left-image img {
     position: absolute;
     width: 100%;
     top: 0;
+    height: 100%;
     object-fit: cover;
     left: 0;
     bottom: 0;
 }
 
-/* ...... */
-.right{
+/*----------------------- right section --------------------*/
+
+
+
+.right-container {
     display: flex;
     position: relative;
     width: 60vw;
 }
-
-.creative{
+.heading {
     position: absolute;
     left: 10%;
-    top: -40%;
+    top: -40px;
 }
-.creative h1{
+.heading h1 {
     font-family: "Merriweather";
     font-size: 7rem;
-    font-weight: 800;
+    font-weight: 900;
     color: #333333;
 }
-
-.creative > h1{
+.heading > h1 {
     color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
 }
-.creative > h1::after {
+.heading > h1::after {
     content: "";
     width: 50px;
     height: 12px;
@@ -98,24 +116,24 @@ main{
     border: 2px solid #898888;
     margin-bottom: 25px;
 }
-.creative div{
+.heading div {
     margin-left: 110px;
     margin-top: -30px;
     color: #333333;
     display: flex;
     align-items: center;
-}
 
-.creative div p{
+} 
+.heading div p {
     font-size: 1.5rem;
     font-weight: normal;
     line-height: 30px;
     color: #898888;
     padding-left: 40px;
     padding-top: 30px;
+    
 }
-
-.creative div h1::after {
+.heading div h1::after {
     content: "";
     width: 22px;
     height: 22px;
@@ -124,13 +142,13 @@ main{
     border-radius: 50px;
 } 
 
-.right .btn {
+.right-container .btn-wrapper {
     position: absolute;
     right: 0;
     bottom: -70px;
     right: -190px;
 }
-.right .btn button {
+.right-container .btn-wrapper button {
     background-color: #333333;
     color: #FFFFFF;
     padding: 17px 78px;
@@ -139,7 +157,7 @@ main{
     font-weight: normal;
     cursor: pointer;
 }
-.socialIcon {
+.social-icons {
     position: absolute;
     right: 45px;
     display: flex;
@@ -147,42 +165,61 @@ main{
     gap: 45px;
     top: -16px;
 }
-.socialIcon img {
+.social-icons img {
     width: 20px;
 }
-.socialIcon img:nth-child(2) {
+.social-icons img:nth-child(2) {
     width: 16px;
 }
-.socialIcon img:nth-child(3) {
+.social-icons img:nth-child(3) {
     width: 12px;
 }
-.socialIcon img:nth-child(4) {
+.social-icons img:nth-child(4) {
     width: 16px;
 }
 
-/* ...... */
-.below{
+@media only screen and (max-width: 1258px) {
+    .heading {
+        left: 0;
+        top: 20px;
+    }
+    .heading h1 {
+        font-size: 5rem ;
+    }
+    .heading div h1::after {
+        content: "";
+        width: 18px;
+        height: 18px;
+        background-color: #333333;
+        display: inline-block;
+        border-radius: 50px;
+    } 
+}
+
+
+/*--------------------------- bottom  section ------------------------*/
+.bottom {
     position: absolute;
     top: 320px;
     left: 100px;
 }
- .below ul{
+.bottom ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
- }
- .below ul li {
+}
+.bottom ul li {
     font-size: 1rem;
     list-style-type: none;
     color: #868686;
     display: flex;
     align-items: center;
 }
-.below ul li:not(:last-child) {
+.bottom ul li:not(:last-child) {
     padding-bottom: 28px;
 }
-.below ul li span {
+.bottom ul li span {
     background-color: #868686;
     width: 15px;
     height: 15px;
@@ -197,7 +234,7 @@ main{
 .active-item p {
     color: #333333;
 }
-.below .dot-line {
+.bottom .line-dot {
     height: 120%;
     width: 1.55px;
     background-color: #868686;
@@ -233,4 +270,125 @@ main{
 }
 .arrow > img {
     width: 30px;
+}
+
+@media only screen and (max-width: 1148px) {
+    .img {
+        width: 300px;
+    }
+}
+
+
+@media only screen and (max-width: 1041px) {
+    .left-image-container {
+        display: none;
+    }
+    main {
+        justify-content: center;
+    }
+
+}
+@media only screen and (max-width: 925px) {
+    .social-icons {
+        right: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 880px) {
+    .right-container {
+        width: 100vw;
+    }
+    .social-icons {
+        right: 20px;
+    }
+    .heading h1 {
+        font-size: 3rem ;
+    }
+    .heading div h1::after {
+        content: "";
+        width: 10px;
+        height: 10px ;
+    } 
+    .heading > h1::after {
+        content: "";
+        width: 20px;
+        height: 5px;
+        display: inline-block;
+        border: 2px solid #898888;
+        margin-bottom: 25px;
+    }
+    .heading div {
+        margin-left: 80px;
+        margin-top: -20px;
+    }
+    .heading div p {
+        padding-left: 20px;
+        font-size: 1.2rem;
+    }
+    .right-container .btn-wrapper {
+        left: -30px;
+        top: 180px;
+    }
+    .navbar-container .navbar {
+        height: 12vh;
+    }
+    .bottom {
+        left: 10px;
+    }
+   
+    .bottom ul li {
+        font-size: .8rem;
+    }
+    .quote-icon .fa-quote-right {
+        font-size: 16px;
+    }
+    .bottom ul li span {
+        width: 10px;
+        height: 10px;
+    }
+    .bottom .line-dot {
+        left: 4px;
+        top: 17px;
+    }
+    .img {
+        width: 200px;
+    }
+    .bottom-quote {
+        left: 220px;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    .arrow {
+        display: none;
+    }
+    .social-icons {
+        display: none;
+    }
+    .navbar-container .navbar {
+        padding: 0 10px;
+    }
+    .logo {
+        margin-right: 40px;
+    }
+    .navbar-container .navbar .list {
+        gap: 40px;
+    }
+    .navbar-container .navbar .list .list-item {
+        width: 70px;
+    }
+    .navbar-container .navbar .list .list-item:last-child {
+        margin-right: 40px;
+    }
+    .right-container .btn-wrapper {
+        right: 0;
+        left: 0px;
+    }
+    .right-container .btn-wrapper button {
+        padding: 17px 40px;
+    }
+    .heading {
+        margin-left: 8px;
+    }
 }
